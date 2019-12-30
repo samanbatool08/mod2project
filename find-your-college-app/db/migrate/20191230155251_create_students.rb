@@ -4,6 +4,7 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.float :GPA
       t.string :name
       t.string :high_school
+      t.string :username 
 
       t.timestamps
     end

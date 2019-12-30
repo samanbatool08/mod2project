@@ -1,0 +1,7 @@
+<h1> Your Student Home Page </h1>
+
+
+<%= button_to "Edit", edit_student_path(@student), method: :get %>
+<%= button_to "Delete", student_path(@student), method: :delete %>
+<%= button_to "Sign Out", signout_path(@student), method: :get %>
+

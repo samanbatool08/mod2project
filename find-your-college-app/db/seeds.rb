@@ -8,7 +8,7 @@
 
 Student.create(name:"Alex", GPA:"3.3", high_school:"Bard")
 Student.create(name:"Saman", GPA:"3.0", high_school:"John Bowne Highschool")
-Student.create(name:"Natalie", GPA:"2.5", high_school:"Sewanhaka Highschool")
+Student.create(name:"Natalie", GPA:"3.8", high_school:"Sewanhaka Highschool")
 
 Application.create(deadline:Time.now, category:"early action", resume:"will upload", student_id:1, college_id:1)
 

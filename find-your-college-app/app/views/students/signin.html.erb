@@ -1,0 +1,13 @@
+<h1> Sign In Page </h1>
+
+<%= form_tag signin_path do |f| %>
+    <div class="field">
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+    </div>
+
+    <div class="actions">
+    <%= submit_tag "Sign In" %>
+    </div>
+
+    <% end %>
