@@ -1,0 +1,2 @@
+module CollegeActivitiesHelper
+end
