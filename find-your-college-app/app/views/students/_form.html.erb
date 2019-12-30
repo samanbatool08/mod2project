@@ -1,0 +1,19 @@
+<% if flash[:messages] %>
+  <h2>Errors</h2>
+  <ul>
+    <% flash[:messages].each do |error| %>
+      <li><%= error %> </li>
+    <% end%>
+  </ul>
+<% end%>
+<%= form_for @student do |f| %>
+    Full Name: <%= f.text_field :name %>
+    Username: <%= f.text_field :username %>
+    High School: <%= f.text_field :high_school %>
+    Your current GPA: <%= f.number_field :GPA %>
+    <%= f.submit %>
+    <% end %>
+
+
+
+    

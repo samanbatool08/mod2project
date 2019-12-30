@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_12_30_161937) do
     t.float "GPA"
     t.string "name"
     t.string "high_school"
+    t.string "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
