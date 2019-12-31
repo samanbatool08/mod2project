@@ -9,7 +9,7 @@ def signin
 end
 
 def after_signin
-    @student = Student.find_by(params[:username])
+    @student = Student.find_by(username: params[:username])
     if @student.valid?
         session[:student_id] = @student.id
     redirect_to home_path
@@ -61,6 +61,13 @@ def destroy
     @student.destroy
     redirect_to root_path
 end
+
+def search 
+    @student = Student.find(session[:student_id])
+    @activities = Activity.all
+end
+
+
 
 private
 
