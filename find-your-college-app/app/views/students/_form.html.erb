@@ -10,7 +10,7 @@
     Full Name: <%= f.text_field :name %>
     Username: <%= f.text_field :username %>
     High School: <%= f.text_field :high_school %>
-    Your current GPA: <%= f.number_field :GPA %>
+    Your current GPA: <%= f.number_field :GPA, step: :any %>
     <%= f.submit %>
     <% end %>
 

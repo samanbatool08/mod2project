@@ -11,4 +11,7 @@ get 'signout', to: "students#signout"
 
 post 'signin', to: "students#after_signin"
 
+get 'search', to: "students#search"
+post 'search', to: "students#match"
+
 end
