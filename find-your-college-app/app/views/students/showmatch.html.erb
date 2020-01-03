@@ -1,0 +1,6 @@
+<h1> Your matching College </h1>
+<h2> <%= @college.name%> </h2>
+
+<h3> Apply here: </h3>
+<%= button_to @college.name, application_path(@college), method: :get %>
+

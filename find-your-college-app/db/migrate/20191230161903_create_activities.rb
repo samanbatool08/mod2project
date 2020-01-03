@@ -3,7 +3,6 @@ class CreateActivities < ActiveRecord::Migration[6.0]
     create_table :activities do |t|
       t.string :name
       t.string :category
-      t.string :level
 
       t.timestamps
     end

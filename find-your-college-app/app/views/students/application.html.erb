@@ -1,0 +1,18 @@
+<h1> Application for: <%= @college.name%> </h1>
+
+<h2> <%= @student.name%>'s Information: </h2>
+<%= @student.name %>
+<%= @student.high_school %>
+<%= @student.GPA %> 
+<% @activities.each do |activity| %>
+<%= activity.name %>
+<% end %>
+
+<%= form_for @application do |f| %>
+<%= f.label :resume%>
+<%= f.file_field :resume%>
+<%= f.submit %>
+<% end %>
+
+
+
