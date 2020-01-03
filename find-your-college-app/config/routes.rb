@@ -13,5 +13,12 @@ post 'signin', to: "students#after_signin"
 
 get 'search', to: "students#search"
 post 'search', to: "students#match"
+get 'match', to: "students#showmatch"
+
+get 'application', to: "students#application"
+post 'applications', to: "students#home"
+get 'applications', to: "students#home"
+
+get 'showapplication', to: "applications#showapplication"
 
 end

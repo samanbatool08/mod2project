@@ -67,12 +67,44 @@ def search
     @activities = Activity.all
 end
 
+def match
+    count = [College.first,0,0]
+    fixedParams = []
+    params["name"][1..].each do |i|
+        StudentActivity.create(student_id:session[:student_id], activity_id:i)
+        fixedParams << CollegeActivity.find_by(activity_id: Activity.find(i.to_i))
+    end
+    College.all.each do |college|
+        CollegeActivity.where(college_id:college.id).each do |activity|
+            if fixedParams.include?(activity)
+                count[2] += 1
+            end
+        end
+        if count[2] > count[1]
+            count[0] = college
+        end
+        count[2] = 0
+    end
+    session[:college_id] = count[0].id
+    redirect_to match_path
+end
 
+def showmatch
+    @college = College.find(session[:college_id])
+end
+
+def application
+    @college = College.find(params["format"])
+    @student = Student.find(session[:student_id])
+    @application = Application.new
+    @activities = @student.activities
+end
 
 private
 
 def student_params
     params.require(:student).permit(:name, :GPA, :high_school, :username)
 end
+
 
 end

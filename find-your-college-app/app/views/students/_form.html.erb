@@ -6,13 +6,17 @@
     <% end%>
   </ul>
 <% end%>
+<ul>
 <%= form_for @student do |f| %>
-    Full Name: <%= f.text_field :name %>
-    Username: <%= f.text_field :username %>
-    High School: <%= f.text_field :high_school %>
-    Your current GPA: <%= f.number_field :GPA, step: :any %>
-    <%= f.submit %>
+    <br> Full Name: <%= f.text_field :name %> </br>
+    <br> Username: <%= f.text_field :username %> </br>
+    <br> High School: <%= f.text_field :high_school %> </br>
+    <br> Your current GPA: <%= f.number_field :GPA, step: :any %> </br>
+    <br> <%= f.submit %> </br>
     <% end %>
+</ul>
+
+
 
 
 

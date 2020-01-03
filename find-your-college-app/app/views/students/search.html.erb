@@ -1,6 +1,6 @@
 <h1> Search Colleges </h1>
 
-<%= form_with(url:"/search", method: "get") do |f| %>
+<%= form_with(url:search_path, method: "post") do |f| %>
     <% @activities.map{|activity| activity.category}.uniq.each do |category| %>
         <h2> <%=category%></h2>
         <%= f.collection_select :name, @activities.where(category:category), :id, :name, {:include_bank => ""}, {:multiple => true}%>

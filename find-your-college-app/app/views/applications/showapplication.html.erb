@@ -1,0 +1,10 @@
+<h1> <%= @student.name%>'s Submitted Applications </h2>
+
+<% @student.applications.each do |application|%>
+<%= application.name %>
+<% end %>
+
+<%= button_to "Start a New Search", search_path(@student), method: :get %>
+
+
+<%= link_to "Back to Home", home_path %>
